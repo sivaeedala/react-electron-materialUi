@@ -62,7 +62,7 @@ export default function AutoCompleteSearch() {
       renderInput={(params) => (
         <TextField
           {...params}
-          label="type here.."
+          label="How can i help you today?"
           variant="outlined"
           fullWidth={true}
           size="small"

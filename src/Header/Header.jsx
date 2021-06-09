@@ -13,6 +13,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import homeImg from "../Images/photo-1488426862026-3ee34a7d66df.jfif";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,14 +28,14 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: "flex-end",
   },
   large: {
-    width: theme.spacing(5),
-    height: theme.spacing(5),
+    width: theme.spacing(4),
+    height: theme.spacing(4),
   },
   appbar: {
     borderRadius: 16,
     backgroundColor: "#6fa6d6",
-    paddingTop: "2px",
-    paddingBottom: "2px",
+    // paddingTop: "2px",
+    // paddingBottom: "2px",
   },
   inline: {
     display: "inline-flex",
@@ -58,7 +59,13 @@ function Header(props) {
           <Toolbar className={classes.toolbar}>
             <Grid container spacing={0}>
               <Grid item xs={11} lg={11} className={classes.inline}>
-                <Avatar className={classes.large}>S</Avatar>
+                <div style={{ paddingTop: "5px" }}>
+                  <Avatar
+                    className={classes.large}
+                    src={homeImg}
+                    alt="Home"
+                  ></Avatar>
+                </div>
                 <Typography className={classes.typography}>
                   Good Morning!
                 </Typography>

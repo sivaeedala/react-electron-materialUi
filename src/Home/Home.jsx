@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 function Home(props) {
   const classes = useStyles();
   return (
-    <Box p={3} className={classes.home}>
+    <Box p={0} className={classes.home}>
       <Header></Header>
       <MainContent></MainContent>
       <Footer></Footer>

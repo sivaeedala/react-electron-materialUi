@@ -54,7 +54,7 @@ function Footer(props) {
         <AppBar position="static" className={classes.appbar}>
           <Toolbar className={classes.toolbar}>
             <Grid container spacing={1}>
-              <Grid item xs={1} lg={1} alignContent="flex-end">
+              <Grid item xs={2} lg={1} alignContent="flex-end">
                 <Avatar
                   alt="Wellsfargo logo"
                   variant="square"
@@ -62,7 +62,7 @@ function Footer(props) {
                   className={classes.small}
                 />
               </Grid>
-              <Grid item xs={10} lg={10}>
+              <Grid item xs={9} lg={10}>
                 <AutoCompleteSearch></AutoCompleteSearch>
               </Grid>
               <Grid item xs={1} lg={1}>

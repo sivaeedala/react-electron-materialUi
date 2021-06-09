@@ -8,20 +8,16 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    Content: "Test tlkadsndlasdjlasdmnv klasdhv,ms cv;ljsdfj lkasjd sjdv ",
+    Content: "PTCT Town hall with Suresh",
   },
   {
-    Content: "Test tlkadsndlasdjlasdmnv klasdhv,ms cv;ljsdfj lkasjd sjdv ",
+    Content: "CCBT Virtual Connect",
   },
   {
-    Content: "Test tlkadsndlasdjlasdmnv klasdhv,ms cv;ljsdfj lkasjd sjdv ",
+    Content: "Ask me anything with Raj",
   },
   {
-    Content: "Test tlkadsndlasdjlasdmnv klasdhv,ms cv;ljsdfj lkasjd sjdv ",
-  },
-  {
-    Content:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+    Content: "Tech talks on Kafka, Micro front end",
   },
 ];
 
@@ -40,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
   mobileStepper: {
     justifyContent: "center",
     backgroundColor: "#4184bf",
+  },
+  autoSwipe: {
+    padding: "0px",
   },
 }));
 
@@ -68,6 +67,7 @@ function Events() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
+        className={classes.autoSwipe}
       >
         {tutorialSteps.map((step, index) => (
           <div key={step.label}>

@@ -13,11 +13,13 @@ import {
   Grid,
   IconButton,
   Paper,
+  TextField,
 } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import clsx from "clsx";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import "./style/main.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,6 +62,34 @@ const useStyles = makeStyles((theme) => ({
     right: "1%",
     color: "red",
   },
+  meeting: {
+    border: "1px solid #4184bf",
+    borderRadius: "16px",
+    backgroundColor: "#4184bf",
+    display: "flex",
+    flexDirection: "column",
+    boxShadow:
+      "0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%)",
+  },
+  legend: {
+    backgroundColor: "#4184bf",
+    padding: "5px",
+    margin: 0,
+    borderRadius: "25px",
+  },
+  avatar: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
+    backgroundColor: "#f50057",
+  },
+  gridContent: {
+    color: "white",
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: "25ch",
+  },
 }));
 
 function ClockTime(props) {
@@ -72,13 +102,47 @@ function ClockTime(props) {
 
   return (
     <div>
-      <Badge
+      {/* <Badge
         badgeContent={<HighlightOffIcon />}
         overlap="circle"
         color="error"
         className={classes.badge}
-      >
-        <Card className={classes.root}>
+      > */}
+      <fieldset className={classes.meeting}>
+        <legend className={classes.legend}>
+          <Avatar aria-label="recipe" className={classes.avatar}>
+            T
+          </Avatar>
+        </legend>
+        <Grid container spacing={3} className={classes.gridContent}>
+          <Grid item>
+            {/* <Typography>India (IST)</Typography>
+            <Typography>10:20 pm</Typography> */}
+            <TextField
+              id="outlined-read-only-input"
+              label="India-IST"
+              defaultValue="10:30 AM"
+              InputProps={{
+                readOnly: true,
+              }}
+              variant="outlined"
+              className={{
+                input: classes.textField,
+              }}
+            />
+          </Grid>
+          <Grid item>
+            <Typography>NY (ET)</Typography>
+            <Typography>10:20 am</Typography>
+          </Grid>
+          <Grid item>
+            <Typography>California (CT)</Typography>
+            <Typography>09:00 am</Typography>
+          </Grid>
+        </Grid>
+      </fieldset>
+
+      {/* <Card className={classes.root}>
           <CardHeader
             avatar={
               <Avatar
@@ -142,9 +206,9 @@ function ClockTime(props) {
               <Typography>10:20 pm</Typography>
             </CardContent>
           </Grid>
-        </Grid> */}
-        </Card>
-      </Badge>
+        </Grid> 
+        </Card> */}
+      {/* </Badge> */}
     </div>
     // <Card className={classes.root}>
     //   <CardContent>
