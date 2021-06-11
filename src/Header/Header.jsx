@@ -14,10 +14,12 @@ import SearchIcon from "@material-ui/icons/Search";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import homeImg from "../Images/photo-1488426862026-3ee34a7d66df.jfif";
+import Menus from "./Menus";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    color: "white",
   },
   toolbar: {
     alignItems: "flex-start",
@@ -71,13 +73,14 @@ function Header(props) {
                 </Typography>
               </Grid>
               <Grid item xs={1} lg={1}>
-                <IconButton
+                {/* <IconButton
                   aria-label="display more actions"
                   edge="end"
                   color="inherit"
                 >
                   <MoreIcon />
-                </IconButton>
+                </IconButton> */}
+                <Menus />
               </Grid>
             </Grid>
           </Toolbar>

@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     "& > *": {
       margin: theme.spacing(1),
+      position: "absolute",
+      left: 0,
+      bottom: 0,
     },
   },
   toolbar: {
