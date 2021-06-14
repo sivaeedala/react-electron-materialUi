@@ -1,17 +1,12 @@
-/* .body {
-  padding: 0;
-  margin: 0;
-  background-color: transprent;
-  text-align: center;
-  height: 100vh;
-  font-family: "lato";
-  font-weight: 100;
-} */
 .wrapper {
   position: absolute;
+  margin: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  /* display: flex; */
+  overflow: hidden;
 }
 .circle {
   display: inline-block;
@@ -20,40 +15,19 @@
   margin: 2px;
   background-color: #fcdc29;
   border-radius: 50%;
-  animation: loading 2.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
+  animation: loading 3s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
   transform-origin: bottom center;
   position: relative;
 }
-@keyframes loading {
-  0% {
-    /* transform: translateY(0px); */
-    background-color: #fcdc29;
-  }
-  25% {
-    /* transform: translateY(0px); */
-    background-color: #ca212e;
-  }
-  50% {
-    /* transform: translateY(50px); */
-    background-color: #fcdc29;
-  }
-  75% {
-    /* transform: translateY(0px); */
-    background-color: #ca212e;
-  }
-  100% {
-    /* transform: translateY(0px); */
-    background-color: #fcdc29;
-  }
-}
+
 .circle-1 {
-  animation-delay: 0.1s;
-}
-.circle-2 {
   animation-delay: 0.2s;
 }
+.circle-2 {
+  animation-delay: 0.4s;
+}
 .circle-3 {
-  animation-delay: 0.3s;
+  animation-delay: 0.6s;
 }
 .circle-4 {
   animation-delay: 0.4s;
@@ -69,4 +43,22 @@
 }
 .circle-8 {
   animation-delay: 0.8s;
+}
+
+@keyframes loading {
+  0% {
+    left: -5%;
+    background-color: #fcdc29;
+  }
+
+  20%,
+  50% {
+    left: calc((100% - 5%) / 2);
+    background-color: #ca212e;
+  }
+  90%,
+  100% {
+    left: 100%;
+    background-color: #fcdc29;
+  }
 }

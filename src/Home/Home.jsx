@@ -19,7 +19,11 @@ function Home(props) {
     setTimeout(() => {
       setShowSplash(false);
     }, 8000);
-    return <SplashPage />;
+    return (
+      <Box>
+        <SplashPage />
+      </Box>
+    );
   }
   return (
     <>
